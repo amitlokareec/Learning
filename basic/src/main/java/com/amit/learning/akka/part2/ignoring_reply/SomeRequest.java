@@ -1,4 +1,4 @@
-package com.amit.learning.akka.part2.ignoring_replies;
+package com.amit.learning.akka.part2.ignoring_reply;
 
 import akka.Done;
 import akka.actor.typed.ActorRef;

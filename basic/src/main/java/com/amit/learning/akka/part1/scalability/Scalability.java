@@ -1,9 +1,10 @@
-package com.amit.learning.akka.part1.basics;
+package com.amit.learning.akka.part1.scalability;
 
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.ActorSystem;
 import akka.actor.typed.Behavior;
 import akka.actor.typed.javadsl.Behaviors;
+import com.amit.learning.akka.part1.immutability.ImmutableMessageWithBankAccountEx;
 
 public class Scalability {
     public static Behavior<Object> createChildActors() {

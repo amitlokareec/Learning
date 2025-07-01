@@ -1,10 +1,11 @@
-package com.amit.learning.akka.part1.basics;
+package com.amit.learning.akka.part1.elasticity;
 
 import akka.actor.typed.Behavior;
 import akka.actor.typed.javadsl.AbstractBehavior;
 import akka.actor.typed.javadsl.ActorContext;
 import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.javadsl.Receive;
+import com.amit.learning.akka.part1.immutability.ImmutableMessageWithBankAccountEx;
 
 public class ElasticityExBankAccountWorkerActor extends AbstractBehavior<ImmutableMessageWithBankAccountEx.Deposit> {
 

@@ -1,4 +1,4 @@
-package com.amit.learning.akka.part2.RequestResponsewithAskBetTwoActor;
+package com.amit.learning.akka.part2.request_response_with_ask_bet_two_actor;
 
 import akka.actor.typed.ActorRef;
 

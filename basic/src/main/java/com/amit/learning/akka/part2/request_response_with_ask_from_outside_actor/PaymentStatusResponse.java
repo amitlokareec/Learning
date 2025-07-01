@@ -1,4 +1,4 @@
-package com.amit.learning.akka.part2.RequestResponsewithAskFromOutsideActor;
+package com.amit.learning.akka.part2.request_response_with_ask_from_outside_actor;
 
 public class PaymentStatusResponse {
     public final boolean isApproved;

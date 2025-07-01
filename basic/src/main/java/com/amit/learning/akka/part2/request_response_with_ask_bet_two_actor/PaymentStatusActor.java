@@ -1,4 +1,4 @@
-package com.amit.learning.akka.part2.RequestResponsewithAskBetTwoActor;
+package com.amit.learning.akka.part2.request_response_with_ask_bet_two_actor;
 
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.Behavior;
@@ -7,7 +7,7 @@ import akka.actor.typed.javadsl.ActorContext;
 import akka.actor.typed.javadsl.AskPattern;
 import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.javadsl.Receive;
-import com.amit.learning.akka.part2.RequestResponsewithAskBetTwoActor.RequestResponsewithAskBetTwoActor.PaymentStatusRequest;
+import com.amit.learning.akka.part2.request_response_with_ask_bet_two_actor.RequestResponsewithAskBetTwoActor.PaymentStatusRequest;
 
 import java.time.Duration;
 import java.util.concurrent.CompletionStage;

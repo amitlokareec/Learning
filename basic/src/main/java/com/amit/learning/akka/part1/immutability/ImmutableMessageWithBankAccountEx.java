@@ -1,4 +1,4 @@
-package com.amit.learning.akka.part1.basics;
+package com.amit.learning.akka.part1.immutability;
 
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.ActorSystem;

@@ -1,4 +1,4 @@
-package com.amit.learning.akka.part2.genericresponsewrapper;
+package com.amit.learning.akka.part2.generic_response_wrapper;
 
 import akka.actor.typed.Behavior;
 import akka.actor.typed.javadsl.AbstractBehavior;

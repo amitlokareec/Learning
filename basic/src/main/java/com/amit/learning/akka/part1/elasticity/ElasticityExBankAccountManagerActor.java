@@ -1,4 +1,4 @@
-package com.amit.learning.akka.part1.basics;
+package com.amit.learning.akka.part1.elasticity;
 
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.ActorSystem;
@@ -11,7 +11,7 @@ import akka.actor.typed.javadsl.Receive;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.amit.learning.akka.part1.basics.ImmutableMessageWithBankAccountEx.Deposit;
+import static com.amit.learning.akka.part1.immutability.ImmutableMessageWithBankAccountEx.Deposit;
 
 public class ElasticityExBankAccountManagerActor extends AbstractBehavior<Deposit> {
     private final List<ActorRef<Deposit>> workers = new ArrayList<>();
