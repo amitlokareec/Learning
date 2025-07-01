@@ -2,6 +2,7 @@ package com.amit.learning.akka.part2.timer.sch;
 
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.Behavior;
+import akka.actor.typed.SupervisorStrategy;
 import akka.actor.typed.Terminated;
 import akka.actor.typed.javadsl.AbstractBehavior;
 import akka.actor.typed.javadsl.ActorContext;
@@ -42,10 +43,16 @@ public class PaymentManager extends AbstractBehavior<ManagerCommand> {
     }
 
     private Behavior<ManagerCommand> onProcessPayment(ProcessPayment msg) {
+        Behavior<PaymentCommand> supervisedWorkerBehavior =//Supervision
+                Behaviors.supervise(PaymentWorker.create())
+                        .onFailure(WorkerException.class, SupervisorStrategy.restart());
         ActorRef<PaymentCommand> worker =
-                context.spawn(PaymentWorker.create(),
+                context.spawn(supervisedWorkerBehavior,
                         "payment-" + msg.paymentId);
-        context.watch(worker);
+        /*ActorRef<PaymentCommand> worker =
+                context.spawn(PaymentWorker.create(),
+                        "payment-" + msg.paymentId);*/
+        context.watch(worker);//Watching the child right after spawning
         //Spawed actor is told to work on the StartPayment Object
         worker.tell(new StartPayment(msg.paymentId));
         return this;

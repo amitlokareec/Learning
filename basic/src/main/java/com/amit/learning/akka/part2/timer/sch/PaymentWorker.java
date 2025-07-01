@@ -1,6 +1,7 @@
 package com.amit.learning.akka.part2.timer.sch;
 
 import akka.actor.typed.Behavior;
+import akka.actor.typed.Terminated;
 import akka.actor.typed.javadsl.AbstractBehavior;
 import akka.actor.typed.javadsl.ActorContext;
 import akka.actor.typed.javadsl.Behaviors;
@@ -20,6 +21,10 @@ public class PaymentWorker extends AbstractBehavior<PaymentCommand> {
     public Receive<PaymentCommand> createReceive() {
         return newReceiveBuilder()
                 .onMessage(StartPayment.class, this::onStartPayment)
+                .onSignal(Terminated.class, signal -> {
+                    getContext().getLog().info("Watched actor stopped: {}", signal.getRef());
+                    return Behaviors.same();
+                })
                 .build();
     }
 
