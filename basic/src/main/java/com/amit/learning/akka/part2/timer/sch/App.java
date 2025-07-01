@@ -2,7 +2,7 @@ package com.amit.learning.akka.part2.timer.sch;
 
 import akka.actor.typed.ActorSystem;
 
-public class MainApp {
+public class App {
     public static void main(String[] args) {
         ActorSystem<ManagerCommand> system =
                 ActorSystem.create(PaymentManager.create(), "PaymentSystem");

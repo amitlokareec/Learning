@@ -1,15 +1,8 @@
 package com.amit.learning.akka.part2.RequestResponsewithAskBetTwoActor;
 
 import akka.actor.typed.ActorRef;
-import akka.actor.typed.ActorSystem;
 
 public class RequestResponsewithAskBetTwoActor {
-
-    public static void main(String[] args) {
-        ActorSystem<Command> system = ActorSystem.create(PaymentStatusActor.create(), "PaymentSystem");
-        system.tell(new TriggerAsk());
-    }
-
 
     class PaymentStatusRequest implements Command {
         public final String txnId;

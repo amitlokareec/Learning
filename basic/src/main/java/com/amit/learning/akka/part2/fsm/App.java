@@ -2,7 +2,7 @@ package com.amit.learning.akka.part2.fsm;
 
 import akka.actor.typed.ActorSystem;
 
-public class MainApp {
+public class App {
     public static void main(String[] args) throws InterruptedException {
         // Create the root ActorSystem with initial state as idle
         ActorSystem<Command> system =
