@@ -16,7 +16,7 @@
     </properties>
 
     <dependencies>
-        <!-- Akka Actor -->
+
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-actor_2.13</artifactId>
@@ -31,12 +31,6 @@
         </dependency>
 
         <!-- Logging implementation (optional) -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.36</version>
-        </dependency>
-
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-actor-typed_${scala.binary.version}</artifactId>
@@ -77,6 +71,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>
