@@ -1,4 +1,4 @@
-package com.amit.learning.akka.timer.sch;
+package com.amit.learning.akka.part2.timer.sch;
 
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.Behavior;

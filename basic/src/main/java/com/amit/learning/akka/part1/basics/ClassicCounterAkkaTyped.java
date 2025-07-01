@@ -1,4 +1,4 @@
-package com.amit.learning.akka;
+package com.amit.learning.akka.part1.basics;
 
 import akka.actor.typed.ActorSystem;
 import akka.actor.typed.Behavior;
@@ -8,6 +8,7 @@ public class ClassicCounterAkkaTyped {
     public static Behavior<Integer> create() {
         return behavior(0);
     }
+
     private static Behavior<Integer> behavior(int count) {
         return Behaviors.receive((context, message) -> {
             int newCount = count + message;

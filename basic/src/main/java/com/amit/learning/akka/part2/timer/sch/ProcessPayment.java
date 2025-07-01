@@ -1,4 +1,4 @@
-package com.amit.learning.akka.timer.sch;
+package com.amit.learning.akka.part2.timer.sch;
 
 public class ProcessPayment implements ManagerCommand {
     public final String paymentId;

@@ -1,4 +1,4 @@
-package com.amit.learning.akka;
+package com.amit.learning.akka.part1.basics;
 
 import akka.actor.typed.Behavior;
 import akka.actor.typed.javadsl.AbstractBehavior;
